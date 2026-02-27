@@ -233,13 +233,13 @@ def user_stats(df):
     ans = str(df['User Type'].value_counts()).splitlines()
     print("  . counts of user types:")
     for i in ans[1:-1]: # the first row is title and the last row is about datatype.
-        print(f'   \ {i}')
+        print(f'   \\ {i}')
 
     # Display counts of gender
     ans = str(df['Gender'].value_counts()).splitlines()
     print("\n  . counts of Gender:")
     for i in ans[1:-1]: # the first row is title and the last row is about datatype.
-        print(f'   \ {i}')
+        print(f'   \\ {i}')
 
     # Display earliest, most recent, and most common year of birth
     ans = df['Birth Year']
