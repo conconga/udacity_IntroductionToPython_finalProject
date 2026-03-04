@@ -78,10 +78,11 @@ def fn_format_question_and_answer(question, valid_data,):
         else: # no errors!
             return valid_data[idx_choice]
 
+
 def test_format_question_and_answer():
-    ret = format_question_and_answer("question?", VALID_INPUTS['cities'])
+    ret = fn_format_question_and_answer("question?", VALID_INPUTS['cities'])
     print(f"the return was = {str(ret)}")
-    assert ret in [(0, None)] + [(1,i) for i in VALID_INPUTS['cities']]
+    assert ret in VALID_INPUTS['cities']
 
 
 def get_filters():
@@ -301,4 +302,7 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+    if False:
+        test_format_question_and_answer()
+    else:
+        main()
